@@ -132,6 +132,7 @@ public class CondyDescTest extends SymbolicDescTest {
         int f;
     }
 
+    // TODO failed
     public void testVarHandles() throws ReflectiveOperationException {
         ClassDesc testClass = ClassDesc.of("CondyDescTest").nested("MyClass");
         MyClass instance = new MyClass();
@@ -216,7 +217,7 @@ public class CondyDescTest extends SymbolicDescTest {
         }
     }
 
-    public void testLifting() {
+    public void testLifting() { // TODO failed
         DynamicConstantDesc<Object> unliftedNull = DynamicConstantDesc.ofNamed(ConstantDescs.BSM_NULL_CONSTANT, "_", CD_Object, EMPTY_ARGS);
         assertEquals(ConstantDescs.NULL, unliftedNull);
         assertNotSame(ConstantDescs.NULL, unliftedNull);
